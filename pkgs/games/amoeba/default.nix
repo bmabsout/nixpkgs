@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
     })
     (fetchurl {
       url = "http://http.debian.net/debian/pool/contrib/a/amoeba/amoeba_${version}-${debver}.debian.tar.xz";
-      sha256 = "1xgi2sqzq97w6hd3dcyq6cka8xmp6nr25qymzhk52cwqh7qb75p3";
+      sha256 = "sha256-Ga/YeXbPXjkG/6qd9Z201d14Hlj/Je6DxgzeIQOqrWc=";
     })
   ];
   sourceRoot = "amoeba-1.1.orig";
