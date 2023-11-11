@@ -22,12 +22,12 @@ stdenv.mkDerivation rec {
   '';
   postPatch = ''
     sed -i packer/pakfile.cpp -e 's|/usr/share/amoeba|${amoeba-data}/share/amoeba|'
-    sed -i main/linux-config/linux-config.cpp -e 's|libgdk-x11-2.0.so.0|${gtk2}/lib/&|'
-    sed -i main/linux-config/linux-config.cpp -e 's|libgtk-x11-2.0.so.0|${gtk2}/lib/&|'
+    sed -i main/linux-config/linux-config.cpp -e 's|libgdk-x11-2.0.so.0|${gtk3}/lib/&|'
+    sed -i main/linux-config/linux-config.cpp -e 's|libgtk-x11-2.0.so.0|${gtk3}/lib/&|'
   '';
 
   nativeBuildInputs = [ pkg-config ];
-  buildInputs = [ alsa-lib expat freetype gtk2 libvorbis libGLU xorg.libXxf86vm ];
+  buildInputs = [ alsa-lib expat freetype gtk3 libvorbis libGLU xorg.libXxf86vm ];
 
   installPhase = ''
     mkdir -p $out/bin $out/share/man/man1/
