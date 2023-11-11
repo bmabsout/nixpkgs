@@ -3,7 +3,7 @@
 stdenv.mkDerivation rec {
   pname = "amoeba";
   version = "1.1";
-  debver = "29.1";
+  debver = "31";
 
   srcs = [
     (fetchurl {
